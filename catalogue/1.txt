@@ -1,0 +1,6 @@
+Les îles à indice 4 dans un coin, à 6 sur un côté et à 8 au milieu du puzzle :
+Une île dans un coin ne peut avoir que deux îles voisines, et le  nombre de ponts vers chacun de ces voisins est limité à deux.
+Par conséquent cette île n'a qu'une solution, relier deux ponts à chacune de ces îles voisines. Cela fonctionne aussi
+avec une île à indice 2 qui n'a qu'un seul voisin.
+La même logique fonctionne pour 6 et 8, qui devront obligatoirement tracer toutes les possibilités de ponts pour
+correspondre à leur indice. Vous avez dorénavant un point de départ pour résoudre le puzzle.

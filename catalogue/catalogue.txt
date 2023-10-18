@@ -1,0 +1,99 @@
+Techniques de Hashi:
+
+Le Hashi et un puzzle de connexionde ponts basé sur un arrangement rectangulaire de cercles contenant des indices.
+Chaque cercle peut être vu comme une île et son indice représente le nombre de ponts connectés à elle.
+Le but est de construire des ponts horizontaux et verticaux entre les îles pour que le nombre de ponts connectés à une île coincide avec l'indice de cette même île.
+De plus, il ne peux y avoir que deux ponts dans une même direction cardinale, pour un total de 8 ponts maximum par île.
+Les ponts n'ont pas non plus le droit de se croiser entre eux ou de passer au dessus d'une île.
+Ils sont cependant interconnectés, ils doivent se terminer de chaque côté sur une île.
+
+Afin de réaliser ces puzzles, diverses techniques ont été réfléchies pour faciliter la tâche au joueur, et mettre en évidence des ponts obligatoires.
+
+-----------------------------------
+
+Techniques de départ :
+
+La plupart des puzzles de Hashi contiennent des techniques évidentes qui sont détectables au premier regard, car ce sont des situations où l'indice correspond au nombre maximum de ponts connectables.
+Voici quelques exemples :
+
+
+1. Les îles à indice 4 dans un coin, à 6 sur un côté et à 8 au milieu du puzzle :
+Une île dans un coin ne peut avoir que deux îles voisines, et le  nombre de ponts vers chacun de ces voisins est limité à deux.
+Par conséquent cette île n'a qu'une solution, relier deux ponts à chacune de ces îles voisines. Cela fonctionne aussi avec une île à indice 2 qui n'a qu'un seul voisin.
+La même logique fonctionne pour 6 et 8, qui devront obligatoirement tracer toutes les possibilités de ponts pour correspondre à leur indice. Vous avez dorénavant un point de départ pour résoudre le puzzle.
+
+-----------------------------------
+
+Techniques basiques :
+
+L'étape suivante est d'utiliser les techniques de base, qui ne servent pas à compléter une île mais qui peut déterminer la direction dans laquelle vos décisions vont se faire.
+Voici quelques stratégies :
+
+
+1. Une île avec 1 ou 2 comme indice avec un seul voisin n'aura qu'une solution. Vous pouvez donc commencer par chercher ce cas de figure. Ces deux cas devront avoir respectivement 1 et 2 ponts avec leur voisin unique pour être valide.
+On peut noter par ailleurs qu'une île avec un seul voisin ne pourra jamais contenir un indice plus grand que 2, sans quoi cela violerait les règles du jeu.
+
+
+2. Les îles à indice 3 dans un coin, à 5 sur un côté et à 7 au milieu du puzzle :
+Une île dans un coin avec 3 comme indice aura une incertitude au début concernant lequel de ses deux voisins sera relié par deux ponts, et lequel aura le troisième.
+Cependant, nous pouvons être sûr qu'il y a au minimum un pont qui relie chacune des îles. Le pont manquant pourra être décidé plus tard, quand vous aurez avancé dans la partie.
+De la même manière, une île à indice 5 située sur un côté aura trois voisins. Vous pouvez être sûr qu'il existe au moins un pont valide pour chacun des trois voisins.
+Ce la fonctionne aussi avec une île à indice 7, qui aura un pont minimum pour chacun de ses quatres voisins.
+
+2-2. Cas spéciaux
+Si l'on reprends le cas d'un 3 dans un coin du puzzle, mais qu'en plus l'un de ses voisins est une île à indice 1, il n'y a plus de doute possible.
+Toutes les conditions sont réunies et les trois ponts peuvent être placés. La même logique s'applique avec les autres cas s'ils possèdent une île voisine avec un indice de 1.
+
+3. Cas spécial d'un 6 au milieu du puzzle
+Imaginons un cas où une île à indice de 6 possède quatres voisins possibles, dont un qui a 1 pour indice (voir cas de figure).
+Dans toutes les situations, vous aurez au minimum cinq ponts à placer sur les trois autres voisins. En suivant les règles, il devient obligatoire qu'il existe au moins un pont relié à ces trois îles.
+Le fait qu'un pont existe entre le 6 et le 1 pourra être déterminé plus tard.
+
+-----------------------------------
+
+Techniques d'isolation :
+
+L'une des règles du Hashi est que toutes les îles se doivent d'être interconnectées à la fin. Cette règle nous amène à quelques logiques intéressantes
+Voici quelques exemples :
+
+
+1. Isolation d'îles à indice 1, et 2.
+Vous serez parfois confronté à des situations où deux îles à indice 1, ou deux îles à indices 2, sont à proximité l'une de l'autre.
+Les règles du Hashi, vous demandant de connecter toutes les îles du puzzle ensemble, empêche la possibilité de relier complètement ces duos d'îles, sans quoi elles seront isolées du reste du puzzle.
+En suivant cette exception, vous trouverez peut-être des solutions qui deviendront évidentes aux alentours de ces îles.
+
+1-2. Cette technique peut être étendue à une île d'indice 3 ayant parmi ses voisins une île à 1 et une autre à 2. Il vous sera impossible de placer les trois ponts entre ces trois îles, sans quoi elles se retrouveront isolées du reste du puzzle.
+Il y a donc forcément une autre possibilité, vous pouvez exclure celle-ci. C'est la même chose pour une île à indice 2 entourée de deux îles à 1. Les relier ensemble créerait forcément un isolement, il y a donc une autre solution.
+
+1-3. Placer un double pont afin de valider un groupe d'île entier peut-être tentant, mais ce genre de cas de figure amène souvent à vous enfermer et à créer un bloc fermé d'îles.
+De manière générale, si vous tentez d'avancer à tâtons une fois un maximum de techniques utilisées, essayez d'aller chercher les îles qui semblent un peu plus isolées du lot pour ne pas en oublier !
+
+-----------------------------------
+
+Techniques avancées :
+
+Les techniques décrites auparavant ne suffiront pas pour compléter les puzzles les plus compliqués.
+Pour cela, vous aurez besoin de techniques avancées qui demanderont de spéculer sur les quelques coups suivants pour vérifier qu'elles fonctionnent.
+Ces stratégies peuvent vous sembler similaires aux précédentes, mais la grande différence est que le joueur devra progresser à tâtons pour vérifier de lui-même des potentielles contradictions.
+Vous développerez par vous-même d'autres logiques du même genre à force de jouer à niveau de difficulté plus élevé.
+En attendant, voici quelques techniques avancées pour vous aider à résoudre ces situations spéciales :
+
+
+1. Isoler un groupe d'île en bloquant un pont.
+Si l'on assume qu'il n'existe aucun pont possible dans une direction décidée, alors il ne reste qu'une possibilité pour connecter les îles.
+Cette possibilité aboutit à l'isolation d'un groupe d'île, et ce cas de figure n'est pas acceptable dans la résolution d'un puzzle de Hashi.
+Par conséquent, la seule solution semble être qu'il existe au moins un pont dans la direction que vous aviez bloquée auparavant.
+
+2. Isoler un groupe d'île en ajoutant un pont.
+Vous pourriez arriver dans un cas de figure où deux choix sont possibles pour terminer une île. Soit vous placez un double pont, soit vous placez un pont unique sur l'île suivante.
+Commencez par tenter le double pont. Cela pourrait amener, de la même manière que la méthode précédente, à fermer un bloc d'île et donc à vous retrouver coincé.
+Dans ce cas, vous êtes sûr que la seule possibilité est de placer un pont vers l'île suivante pour continuer.
+
+3. Isoler une île avec des ponts.
+Cette technique met en application la règle de ne devoir jamais croiser plusieurs ponts entre eux. Si vous placer des ponts de sorte à ce qu'une île soit enfermée entre quatre murs non reliés à elle, cette île sera condamnée, ce n'est donc pas la bonne solution.
+Avant de placer un pont, pensez donc bien à vérifier que vous n'enfermez pas une île seule, non reliable sans enfreindre la règle des croisements entre ponts.
+Cela pourra vous éliminer des possiblités, et peut-être vous aider à prendre une décision entre deux possiblités.
+
+4. Créer des conflits de connexion d'îles.
+Pensez à analyser toutes les possibilités au niveau d'une île à faible indice dont toutes les options ont été coupées par des placements de ponts que vous aviez décidé auparavant.
+Si vous arrivez à ce cas de figure où une île manque d'un pont et qu'il n'y a pas d'autres solutions, il est possible qu'un placement que vous aviez fait auparavant et qui paraissaît bon n'est finalement pas la bonne solution.

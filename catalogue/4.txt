@@ -1,0 +1,3 @@
+Dans le cas d'une île à indice 4 qui possède exactement trois voisins, dont deux qui sont à indice 1, une seule solution
+s'offre à vous. Puisque que pas plus de deux ponts sont autorisés dans une même direction, toutes les conditions sont
+réunies pour tracer vos quatres ponts : un pont pour chacune des îles à 1, et un double pour la dernière île voisine.

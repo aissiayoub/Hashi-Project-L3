@@ -1,0 +1,4 @@
+Une île avec 1 ou 2 comme indice avec un seul voisin n'aura qu'une solution. Vous pouvez donc commencer par chercher ce
+cas de figure. Ces deux cas devront avoir respectivement 1 et 2 ponts avec leur voisin unique pour être valide.
+On peut noter par ailleurs qu'une île avec un seul voisin ne pourra jamais contenir un indice plus grand que 2, sans
+quoi cela violerait les règles du jeu.

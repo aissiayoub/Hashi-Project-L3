@@ -1,0 +1,15 @@
+Les îles à indice 3 dans un coin, à 5 sur un côté et à 7 au milieu du puzzle :
+Une île dans un coin avec 3 comme indice aura une incertitude au début concernant lequel de ses deux voisins sera relié
+par deux ponts, et lequel aura le troisième.
+Cependant, nous pouvons être sûr qu'il y a au minimum un pont qui relie chacune des îles. Le pont manquant pourra être
+décidé plus tard, quand vous aurez avancé dans la partie.
+De la même manière, une île à indice 5 située sur un côté aura trois voisins. Vous pouvez être sûr qu'il existe au moins
+un pont valide pour chacun des trois voisins.
+Ce la fonctionne aussi avec une île à indice 7, qui aura un pont minimum pour chacun de ses quatres voisins.
+
+Cas spéciaux :
+Si l'on reprends le cas d'un 3 dans un coin du puzzle, mais qu'en plus l'un de ses voisins est une île à indice 1, il
+n'y a plus de doute possible.
+Toutes les conditions sont réunies et les trois ponts peuvent être placés. La même logique s'applique avec les autres
+cas s'ils possèdent une île voisine avec un indice de 1.
+
