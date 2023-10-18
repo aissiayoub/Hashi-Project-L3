@@ -1,0 +1,61 @@
+#menu_box{
+    background: none;
+}
+
+
+#title_hashi{
+    animation-name: intro ;
+    animation-duration: 1s;
+}
+
+#btn_jouer,
+#btn_catalogue, 
+#btn_classement, 
+#btn_option, 
+#btn_quitter, 
+#btn_normal,
+#btn_clm,
+#btn_genie,
+#btn_tuto,
+#btn_facile,
+#btn_difficile,
+#btn_moyen{
+    border: 2px solid darkgray;
+    background: none;
+    border-radius: 2%;
+    font-size: 1em;
+    transition: border-radius 0.3s, font-size 0.3s,  background-color 0.3s, color 0.3s, border 0.3s;
+    animation-name: intro ;
+    animation-duration: 2s;
+}
+
+#btn_jouer:hover, 
+#btn_jouer:hover, 
+#btn_catalogue:hover, 
+#btn_classement:hover, 
+#btn_option:hover, 
+#btn_quitter:hover, 
+#btn_normal:hover,
+#btn_clm:hover,
+#btn_genie:hover,
+#btn_tuto:hover,
+#btn_facile:hover,
+#btn_difficile:hover,
+#btn_moyen:hover{
+    border-radius: 2%;
+    font-size: 1.2em;
+    color : white;
+    background-color: rgb(83, 0, 0);;
+    border: 2px solid white;
+}
+
+
+@keyframes intro {
+    from{
+        padding-left: 20em;
+    }
+
+    to{
+        padding-left: 1em;
+    }
+}
